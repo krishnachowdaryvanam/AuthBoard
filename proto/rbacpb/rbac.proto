@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package rbac;
+
+option go_package="github.com/krishnachowdaryvanam/authboard/proto/rbacpb";
+
+service rbacService{
+    rpc CheckAccess(CheckAccessRequest) returns (CheckAccessResponse);
+    rpc AssignRole(AssignRoleRequest) returns (AssignRoleResponse);
+    rpc RemoveRole(RemoveRoleRequest) returns(RemoveRoleResponse);
+}
+
+message CheckAccessRequest{
+    string user_id = 1;
+    string resource = 2;
+
+}
+
+message CheckAccessResponse{
+   bool allowed = 1;
+}
+
+message AssignRoleRequest{
+    string user_id = 1;
+    string role = 2;
+}
+
+message AssignRoleResponse{
+    bool success = 1;
+}
+
+message RemoveRoleRequest{
+    string user_id = 1;
+    string role = 2;
+}
+
+message RemoveRoleResponse{
+    bool success = 1;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package event;
+
+option go_package="github.com/krishnachowdaryvanam/authboard/proto/eventpb";
+
+service EventService{
+    rpc PublishEvent(EventRequest) returns (EventResponse);
+}
+
+message EventRequest {
+  string event_type = 1;    // e.g., "user_created", "tenant_deleted"
+  string payload = 2;       // JSON or serialized data as string
+}
+
+message EventResponse {
+  bool success = 1;
+}
