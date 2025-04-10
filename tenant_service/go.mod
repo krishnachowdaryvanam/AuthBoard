@@ -1,8 +1,12 @@
-module github.com/krishnachowdaryvanam/authboard
+module github.com/krishnachowdaryvanam/authboard/tenant_service
 
 go 1.22.4
 
 require (
+	github.com/google/uuid v1.6.0
+	github.com/joho/godotenv v1.5.1
+	github.com/krishnachowdaryvanam/authboard v0.0.0-20250409125811-034fdc68bc78
+	github.com/lib/pq v1.10.9
 	google.golang.org/grpc v1.71.1
 	google.golang.org/protobuf v1.36.6
 )
