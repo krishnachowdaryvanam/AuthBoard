@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/krishnachowdaryvanam/authboard/user_service/userpb"
+	userpb "github.com/krishnachowdaryvanam/authboard/user_service/userspb"
 )
 
 type UserServer struct {
@@ -35,6 +35,17 @@ func (*UserServer) CreateUser(ctx context.Context, req *userpb.CreateUserRequest
 
 func (*UserServer) GetUser(ctx context.Context, req *userpb.GetUserRequest) (*userpb.UserResponse, error) {
 	row := db.QueryRow("SELECT id, tenant_id, email, password, created_at, updated_at FROM users WHERE id=$1", req.Id)
+
+	var u userpb.UserResponse
+	err := row.Scan(&u.Id, &u.TenantId, &u.Email, &u.Password, &u.CreatedAt, &u.UpdatedAt)
+	if err != nil {
+		return nil, err
+	}
+	return &u, nil
+}
+
+func (*UserServer) GetUserByEmail(ctx context.Context, req *userpb.GetUserByEmailRequest) (*userpb.UserResponse, error) {
+	row := db.QueryRow("SELECT id, tenant_id, email, password, created_at, updated_at FROM users WHERE email=$1", req.Email)
 
 	var u userpb.UserResponse
 	err := row.Scan(&u.Id, &u.TenantId, &u.Email, &u.Password, &u.CreatedAt, &u.UpdatedAt)

@@ -6,7 +6,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/krishnachowdaryvanam/authboard/user_service/userpb"
+	userpb "github.com/krishnachowdaryvanam/authboard/user_service/userspb"
 	"google.golang.org/grpc"
 )
 
