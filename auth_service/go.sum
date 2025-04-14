@@ -44,6 +44,8 @@ github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa02
 github.com/klauspost/cpuid/v2 v2.2.7 h1:ZWSB3igEs+d0qvnxR/ZBzXVmxkgt8DdzP6m9pfuVLDM=
 github.com/klauspost/cpuid/v2 v2.2.7/go.mod h1:Lcz8mBdAVJIBVzewtcLocK12l3Y+JytZYpaMropDUws=
 github.com/knz/go-libedit v1.10.1/go.mod h1:MZTVkCWyz0oBc7JOWP3wNAzd002ZbM/5hgShxwh4x8M=
+github.com/krishnachowdaryvanam/authboard v0.0.0-20250409125811-034fdc68bc78 h1:i0T4Ji7joayXVOjvngza9Kpf2i1mmobKa5u5PFt5/pI=
+github.com/krishnachowdaryvanam/authboard v0.0.0-20250409125811-034fdc68bc78/go.mod h1:W36cASO829divDDteHyZhhW5lpOaI3SCIYPcBAjlkTc=
 github.com/krishnachowdaryvanam/authboard/rbac_service v0.0.0-20250411131311-0fd41dc7a9bc h1:MQUtVi0nohkGJrMyNoWVbicMF+yCBxwYXAr1vaWUVc4=
 github.com/krishnachowdaryvanam/authboard/rbac_service v0.0.0-20250411131311-0fd41dc7a9bc/go.mod h1:uoBReVJWRcfaVc6FhpSHgMDqdBIVlKWbsJOGtLeVxKg=
 github.com/krishnachowdaryvanam/authboard/tenant_service v0.0.0-20250411131311-0fd41dc7a9bc h1:glfVNNjlBNnEuiyguLkJ5F8kCWX9rBxCsbWueXpSVVw=

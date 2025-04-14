@@ -4,6 +4,7 @@ go 1.22.4
 
 require (
 	github.com/gin-gonic/gin v1.10.0
+	github.com/krishnachowdaryvanam/authboard v0.0.0-20250409125811-034fdc68bc78
 	github.com/krishnachowdaryvanam/authboard/tenant_service v0.0.0-20250411131311-0fd41dc7a9bc
 	github.com/krishnachowdaryvanam/authboard/user_service v0.0.0-00010101000000-000000000000
 	golang.org/x/crypto v0.32.0

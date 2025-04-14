@@ -11,7 +11,7 @@ var rbacClient rbacpb.RbacServiceClient
 
 // InitRBACClient initializes the gRPC connection to the RBAC service
 func InitRBACClient() {
-	conn, err := grpc.Dial("rbac-service:50051", grpc.WithInsecure())
+	conn, err := grpc.Dial("rbac-service:50053", grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("Failed to connect to RBAC service: %v", err)
 	}
